@@ -126,6 +126,13 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 {product.name}
               </h2>
 
+              {product.colorway && (
+                <div className="mt-1 text-xs font-mono text-[#C8FF2F] flex items-center gap-2">
+                  <span className="text-[#7B807B]">COLORWAY:</span>
+                  <span className="font-bold">{product.colorway}</span>
+                </div>
+              )}
+
               {/* Price lockup */}
               <div className="mt-3 flex items-baseline gap-3 pb-4 border-b border-[#252824]">
                 <span className="text-2xl sm:text-3xl font-black font-mono tracking-tight text-[#C8FF2F] tabular-nums">

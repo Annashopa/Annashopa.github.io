@@ -83,7 +83,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {product.name}
         </h3>
 
-        {/* Short description */}
+        {/* Fashion Colorway & Short description */}
+        {product.colorway && (
+          <p className="mt-0.5 text-[11px] font-mono text-[#C8FF2F]/90 truncate">
+            {product.colorway}
+          </p>
+        )}
         <p className="mt-1 text-xs text-[#7B807B] line-clamp-1 font-mono">
           {product.shortDesc}
         </p>

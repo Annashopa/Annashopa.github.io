@@ -29,6 +29,7 @@ export interface Product {
   specs: ProductSpecs;
   featured?: boolean;
   badge?: string;
+  colorway?: string;
   techHighlights: string[];
 }
 
