@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build",
-    "build:docs": "vite build --outDir docs",
+    "build": "vite build && node scripts/prepare-gh-pages.js",
+    "build:docs": "vite build --outDir docs && node scripts/prepare-gh-pages.js",
     "preview": "vite preview",
     "start": "tsx server.ts",
-    "clean": "rm -rf dist docs server.js",
+    "clean": "rm -rf dist docs assets server.js",
     "lint": "tsc --noEmit"
   },
   "dependencies": {

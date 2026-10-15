@@ -17,7 +17,32 @@
   </head>
   <body class="bg-[#0B0D0C] text-[#F5F5F0] antialiased selection:bg-[#C8FF2F] selection:text-[#0B0D0C]">
     <div id="root"></div>
+
+    <!-- Primary entry point for Vite development and build -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Bulletproof static fallback loader for GitHub Pages root deployment -->
+    <script type="module">
+      setTimeout(() => {
+        const root = document.getElementById('root');
+        if (root && (!root.hasChildNodes() || root.innerHTML.trim() === '')) {
+          if (!document.querySelector('link[href*="assets/index.css"]')) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.crossOrigin = 'anonymous';
+            link.href = './assets/index.css';
+            document.head.appendChild(link);
+          }
+          if (!document.querySelector('script[src*="assets/index.js"]')) {
+            const script = document.createElement('script');
+            script.type = 'module';
+            script.crossOrigin = 'anonymous';
+            script.src = './assets/index.js';
+            document.body.appendChild(script);
+          }
+        }
+      }, 80);
+    </script>
   </body>
 </html>
 
