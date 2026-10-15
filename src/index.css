@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-obsidian: #0B0D0C;
+    --color-lime: #C8FF2F;
+    --color-porcelain: #F5F5F0;
+    --color-graphite: #252824;
+    --color-steel: #7B807B;
+    --font-display: 'Archivo', 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-obsidian);
+    color: var(--color-porcelain);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #252824;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8FF2F;
+}
+
+/* Tabular figures for prices and numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

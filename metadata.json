@@ -1,0 +1,6 @@
+{
+  "name": "ANNASHOP® — The Future of Motion",
+  "description": "Thương hiệu giày thể thao cao cấp: Cầu lông, Tennis & Chạy bộ. Trải nghiệm mua sắm trực tuyến đỉnh cao tích hợp Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
